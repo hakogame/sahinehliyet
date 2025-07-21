@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <title>Şahin Ehliyet - Anasayfa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Şahin Ehliyet ile ehliyet sınavına kolayca hazırlan! PDF indir, çıkmış sorular çöz, konu anlatımlarını incele.">
+  <link rel="stylesheet" href="C:\Users\hp\Desktop\şahin ehliyet\tasarımlar\anasayfa.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      
+      <h1>Şahin Ehliyet</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\index.html">Anasayfa</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\konuanlatimi.html">Konu Anlatımı</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\sorular.html">Çıkmış Sorular</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="ad-wrapper">
+    <div class="ad-box">Reklam (Sol)</div>
+
+    <div class="hero-content">
+      <div class="video-section">
+        <div class="video-container">
+          <div class="sound-hint">🔊 Ses için videoya tıkla</div>
+          <video id="tanitimVideo" src="C:\Users\hp\Desktop\şahin ehliyet\resimler\Ehli.mp4" autoplay loop playsinline muted></video>
+        </div>
+
+        <div class="pdf-info">
+          <h3>PDF İçeriği</h3>
+          <ul>
+            <li>Çıkmış Sorular</li>
+            <li>Güncel Sorular</li>
+            <li>Konu Anlatımı</li>
+          </ul>
+          <span class="highlight">ÜCRETSİZ PDF'İ ŞİMDİ İNDİR</span>
+          <div class="arrow-down">⬇️</div>
+          <a class="download-btn" href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\pdfindir.html" download>PDF'yi Hemen İndir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-box">Reklam (Sağ)</div>
+  </div>
+
+  <section class="tiktok">
+    <h3>Bizi TikTok'ta Takip Et</h3>
+    <p>@sahinehliyet hesabımızda her gün yeni sorular ve ipuçları seni bekliyor!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Şahin Ehliyet. Tüm hakları saklıdır.</p>
+    <a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\gizlilik.html">Gizlilik</a>
+  </footer>
+
+  <script>
+    const video = document.getElementById('tanitimVideo');
+    video.muted = true;
+    video.play();
+    video.addEventListener('click', () => {
+      video.muted = !video.muted;
+      video.play();
+    });
+  </script>
+</body>
+</html>
