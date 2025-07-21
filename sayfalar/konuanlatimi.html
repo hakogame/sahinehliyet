@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trafik, motor ve ilkyardım konularını detaylı öğren. Şahin Ehliyet ile anlaşılır ve sade konu anlatımı.">
+  <title>Konu Anlatımı</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="C:\Users\hp\Desktop\şahin ehliyet\tasarımlar\anasayfa.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f1f5f9;
+      color: #1f2937;
+    }
+
+    .section-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h2 {
+      font-size: 20px;
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .section p {
+      font-size: 16px;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+
+    .read-more {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .read-more:hover {
+      background-color: #2563eb;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 90%;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content p {
+      font-size: 18px;
+      color: #1e293b;
+      margin-bottom: 20px;
+    }
+
+    .modal-content button {
+      padding: 10px 20px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+ <header>
+    <div class="logo">
+      
+      <h1>Şahin Ehliyet</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\index.html">Anasayfa</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\konuanlatimi.html">Konu Anlatımı</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\sorular.html">Çıkmış Sorular</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sayfalar\iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section-container">
+    <div class="section">
+      <h2>Trafik Konu Anlatımı</h2>
+      <p>Trafik kuralları, işaretleri ve güvenli sürüş tekniklerini öğrenin. Bu bölümde tüm trafik bilgileri detaylı şekilde açıklanır.</p>
+      <div class="read-more" onclick="openModal()">İncele</div>
+    </div>
+
+    <div class="section">
+      <h2>Motor Konu Anlatımı</h2>
+      <p>Motor parçaları, işleyişi ve teknik detaylar bu bölümde. Araçların mekanik sistemlerini öğrenin.</p>
+      <div class="read-more" onclick="openModal()">İncele</div>
+    </div>
+
+    <div class="section">
+      <h2>Sağlık Konu Anlatımı</h2>
+      <p>İlk yardım, sağlık bilgisi ve acil durum müdahaleleri hakkında bilgilendirici içeriklere buradan ulaşabilirsiniz.</p>
+      <div class="read-more" onclick="openModal()">İncele</div>
+    </div>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <p>Sitemiz henüz yeni olduğundan bu özellik kullanılmamaktadır. Yakında konulara erişebileceksiniz. Anlayışınız için teşekkürler.</p>
+      <button onclick="closeModal()">Tamam</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
