@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Şahin Ehliyet ile iletişime geçin. Görüş, öneri ve yorumlarınızı paylaşın. Bize ulaşmanız sadece bir adım!">
+  <title>İletişim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="C:\Users\hp\Desktop\şahin ehliyet\anasayfa.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input[type="email"], textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 140px;
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 8px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #cbd5e1;
+    }
+
+    .rating-stars span.selected,
+    .rating-stars span:hover,
+    .rating-stars span:hover ~ span {
+      color: #fbbf24;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+
+    .tiktok {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 18px;
+      color: #475569;
+    }
+
+    #successMessage {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #d1fae5;
+      border: 1px solid #10b981;
+      color: #065f46;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      
+      <h1>Şahin Ehliyet</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\index.html">Anasayfa</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\konuanlatimi.html">Konu Anlatımı</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sorular.html">Çıkmış Sorular</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="email">E-posta Adresiniz:</label>
+        <input type="email" id="email" name="E-Posta" placeholder="ornek@mail.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="puan">Sitemizi Puanlayın:</label>
+        <div class="rating-stars" id="stars">
+          <span data-value="1">★</span>
+          <span data-value="2">★</span>
+          <span data-value="3">★</span>
+          <span data-value="4">★</span>
+          <span data-value="5">★</span>
+        </div>
+        <input type="hidden" name="Puan" id="puan" required>
+      </div>
+
+      <div class="form-group">
+        <label for="yorum">Sormak istediğiniz soruyu veya yorumunuzu yazınız:</label>
+        <textarea id="yorum" name="Yorum" placeholder="Görüşlerinizi yazabilirsiniz..." required></textarea>
+      </div>
+
+      <button type="submit">Gönder</button>
+    </form>
+
+    <div id="successMessage">Yorumunuz ve puanınız için teşekkürler!</div>
+
+    <div class="tiktok">
+      TikTok Adresimiz: <strong>@sahinehliyet</strong>
+    </div>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll("#stars span");
+    const puanInput = document.getElementById("puan");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const value = star.getAttribute("data-value");
+        puanInput.value = value;
+        stars.forEach(s => s.classList.remove("selected"));
+        for (let i = 0; i < value; i++) {
+          stars[i].classList.add("selected");
+        }
+      });
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("contactForm").style.display = "none";
+      document.getElementById("successMessage").style.display = "block";
+    });
+  </script>
+</body>
+</html>

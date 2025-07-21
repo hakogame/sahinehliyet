@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Çıkmış ehliyet sorularını çözerek kendini test et. 45 dakikalık sınav simülasyonu ve anında sonuç değerlendirmesi.">
+ <link rel="stylesheet" type="text/css" href="C:\Users\hp\Desktop\şahin ehliyet\anasayfa.css">
+  <title>Şahin Ehliyet - Çıkmış Sorular</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      padding: 0;
+    }
+
+
+
+    .layout {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .ad-box {
+      width: 120px;
+      height: 600px;
+      background-color: #d1d5db;
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .question-button {
+      padding: 20px 40px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #3b82f6;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .question-button:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .ad-box {
+        width: 90%;
+        height: 150px;
+      }
+
+      .question-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      
+      <h1>Şahin Ehliyet</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\index.html">Anasayfa</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\konuanlatimi.html">Konu Anlatımı</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\sorular.html">Çıkmış Sorular</a></li>
+        <li><a href="C:\Users\hp\Desktop\şahin ehliyet\iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <div class="ad-box">Reklam Sol</div>
+
+    <div class="main-content">
+      <h2>Çıkmış Sorulara Göz At</h2>
+      <a href="C:\Users\hp\Desktop\şahin ehliyet\cikmissorular1.html">
+        <button class="question-button">Çıkmış Sorular - 1</button>
+      </a> <br> <br>
+      <label>Yakında Daha Fazla Çıkmış Soru Eklenecek Lütfen Bekleyin</label>
+    </div>
+
+    <div class="ad-box">Reklam Sağ</div>
+  </div>
+</body>
+</html>
