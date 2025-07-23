@@ -41,15 +41,7 @@
       align-items: center;
       margin-bottom: 10px;
     }
-    .dark-toggle {
-      cursor: pointer;
-      font-size: 14px;
-      background-color: #3b82f6;
-      color: white;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 8px;
-    }
+    
     .ad-wrapper {
       display: flex;
       justify-content: space-between;
@@ -195,7 +187,7 @@
     <div class="top-controls">
       <div id="timer">Süre: 45:00</div>
       <div>
-        <button class="dark-toggle" onclick="toggleDarkMode()">Mod Değiştir</button>
+        
         <button id="penIcon" onclick="alert('Kalem aracı yakında!')">✏️</button>
       </div>
     </div>
@@ -222,7 +214,7 @@
       <p id="scoreText"></p>
       <p id="timeText"></p>
       <p id="blankText"></p>
-      <a class="link-button" href="sorular.html">
+      <a class="link-button" href="C:\Users\hp\Desktop\şahin ehliyet\sorular.html">
         <button class="close-btn">Kapat</button>
       </a>
     </div>
@@ -234,19 +226,513 @@
   </div>
 
   <script>
-    const questions = [
-      {
-        question: "1. Soru: Yangın tehlikesi, patlama durumu, solunum durması varsa kazazede nasıl çıkarılır?",
-        choices: ["A) Rentek manevrası", "B) Sırtta taşıma", "C) Omuzda taşıma", "D) Ayak bileklerinden sürükleme"],
-        correct: 0
-      },
-      {
-        question: "2. Soru: Aşağıdakilerden hangisi motorun parçası değildir?",
-        choices: ["A) Piston", "B) Krank mili", "C) Debriyaj", "D) Supap"],
-        correct: 2
-      }
-    ];
 
+const questions = [
+  {
+    question: `1. Soru: Resimde görülen uygulama hangi kırıkların tespiti için yapılır?<br><img src='soruresimler/1.png' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Omurga kırığı",
+      "B) Üst kol kemiği kırığı",
+      "C) Ön kol kemiği kırığı",
+      "D) Köprücük kemiği kırığı"
+    ],
+    correct: 2
+  },
+  {
+    question: "2. Soru: Kalp ve kan damarları vücudumuzdaki hangi sistemde yer alır?",
+    choices: [
+      "A) Sinir sisteminde",
+      "B) Dolaşım sisteminde",
+      "C) Sindirim sisteminde",
+      "D) Solunum sisteminde"
+    ],
+    correct: 1
+  },
+  {
+    question: "3. Soru: Dinlenme hâlindeki sağlıklı yetişkin bir insanda, normal nabız (kalbin dakikadaki atımı) sayısı hangi değerler arasında olmalıdır?",
+    choices: [
+      "A) 10 - 20",
+      "B) 40 - 50",
+      "C) 60 - 100",
+      "D) 100 - 120"
+    ],
+    correct: 2
+  },
+  {
+    question: "4. Soru: Aşağıdakilerin hangisinde şok pozisyonu vermek sakıncalıdır?",
+    choices: [
+      "A) Bacağında kanama olanlarda",
+      "B) El bileğinde açık kırık olanlarda",
+      "C) Tansiyonu düşük ve nabız alınamayanlarda",
+      "D) Burnundan ve kulağından kanama olanlarda"
+    ],
+    correct: 3
+  },
+     {
+    question: "5. Soru:Aşağıdakilerden hangisi “kaza sonuçlarının ağırlaşmasını önlemek için olay yerinin değerlendirilmesi” işlemini kapsar? ",
+    choices: [
+      "A) Koruma",
+      "B) bildirme",
+      "C) kurtarma",
+      "D) tedavi etme"
+    ],
+    correct: 0
+  },
+   {
+    question: "6. Soru: İlk yardımcı olarak bulunduğunuz güvenli olmayan olay yerinde; kazazedelerden biri başında, boynunda ve sırtında ağrı olduğunu, bacaklarını hareket ettiremediğini söylüyor, ayrıca kazazedenin burnundan ve kulağından kan geliyorsa bu kazazedeyi daha güvenli bir ortama nasıl taşırsınız?",
+    choices: [
+      "A) Baş-boyun-gövde ekseni bozulmadan düz pozisyonda sürükleyerek",
+      "B) Kazazedenin gövdesini sağ omuza yerleştirip ağırlığı dizlere vererek",
+      "C) Omuzdan destek verip yürütmeye çalışarak",
+      "D) Kazazedeyi kucağa alıp ağırlığı yüklenerek"
+    ],
+    correct: 0
+  },
+     {
+   question: `7. Soru: Resimde görülen pozisyon, aşağıdaki durumların hangisinde uygulanır?<br><img src='soruresimler/2.png' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Kalp durması",
+      "B) Bacak kemiği kırılması",
+      "C) Solunum yolu tıkanması",
+      "D) Delici göğüs yaralanması"
+    ],
+    correct: 3
+  },
+     {
+    question: "8. Soru: Baş ve yüzdeki ağır kanamalarda, aşağıdaki bası noktalarından hangisine basınç uygulanır?",
+    choices: [
+      "A) kasık",
+      "B) koltuk altı",
+      "C) şah damarı",
+      "D) köprücük kemiği üzeri"
+    ],
+    correct: 2
+  },
+  {
+    question: "9. Soru: Aşağıdakilerden hangisi, dış kanamalarda yapılacak ilk yardım uygulamalarındandır?",
+    choices: [
+      "A) Uzuv kopması durumunda turnike uygulamaktan kaçınılması",
+      "B) Kanama durmazsa ikinci bir bez koyarak basıncın arttırılması",
+      "C) Kanayan yere en uzak basınç noktasına baskı uygulanması",
+      "D) Kanayan bölgenin kalp hizasının altına indirilmesi"
+    ],
+    correct: 1
+  },
+   {
+    question: "10. Soru:Kaza sonucu vücudun hangi kısımlarında çıkık görülebilir? ",
+    choices: [
+      "A) Kafatası eklemlerinde",
+      "B) Hareketli eklem yerlerinde",
+      "C) Diz ile kalça arasındaki kemikte",
+      "D) Dirsek ile omuz arasındaki kemikte"
+    ],
+    correct: 1
+  },
+     {
+    question: "11. Soru:Kazazedede boyun travması yoksa, hava yolunu açmak için verilebilecek en uygun baş pozisyonu aşağıdakilerden hangisidir? ",
+    choices: [
+      "A) Sırtüstü yatırılmış kazazedenin çenesi kaldırılırken diğer el ile alından bastırılarak başın geriye alınması",
+      "B) Çenenin göğüs kemiğine değecek şekilde başın öne eğilmesi",
+      "C) Başın sert bir zeminde hafif yana dönük olması",
+      "D) Başın sert bir zeminde düz pozisyonda olması"
+    ],
+    correct: 0
+  },
+     {
+    question: "12. Soru:İlk yardımcı olarak bulunduğunuz bir kaza yerinde, kazazedelerden birinin öksürme ile ağzından açık kırmızı renkte, köpüklü kan geldiğini gözlemlediniz. Bu durumda, aşağıdaki organlardan hangisinin yaralandığını düşünürsünüz? ",
+    choices: [
+      "A) böbrek",
+      "B) akciğer",
+      "C) bağırsak",
+      "D) karaciğer"
+    ],
+    correct: 1
+  },
+    {
+   question: `13. Soru: Şekildeki trafik işareti aşağıdakilerden hangisini bildirir?<br><img src='soruresimler/3.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Kamyonlar için geçme yasağı sonunu",
+      "B) Karşıdan gelene yol verilmesi gerektiğini",
+      "C) Kamyonlar için geçme yasağı başlangıcını",
+      "D) Öndeki taşıtın geçilmesinin yasak olduğunu"
+    ],
+    correct: 0
+  },
+   {
+    question: "14. Soru: Yerleşim birimleri dışındaki kara yollarında, hangi tür taşıtların öndeki araçla olan takip mesafesi 50 metreden az olmamalıdır?",
+    choices: [
+      "A) otomobil",
+      "B) motosiklet",
+      "C) tehlikeli madde taşıyan taşıt",
+      "D) lastik tekerlekli traktör"
+    ],
+    correct: 2
+  },
+   {
+question: `15. Soru: Şekildeki durumda sürücünün hangisini yapması zorunludur?<br><img src='soruresimler/4.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Uygun mesafede mutlaka durması",
+      "B) Sola dönecekse, durmadan seyrini sürdürmesi",
+      "C) Sağa dönecekse, durmadan seyrini sürdürmesi",
+      "D) İleri yönde gidecekse, durmadan seyrini sürdürmesi"
+    ],
+    correct: 0
+  },
+    {
+    question: "16. Soru: Aksine bir işaret bulunmadıkça yerleşim yeri içindeki kara yollarında, lastik tekerlekli traktörler için azami hız saatte kaç kilometredir?",
+    choices: [
+      "A) 10",
+      "B) 20",
+      "C) 30",
+      "D) 40"
+    ],
+    correct: 1
+  },
+     {
+   question: `17. Soru: Şekle göre aşağıdakilerden hangisi yasaktır?<br><img src='soruresimler/5.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Araçların takip mesafesine uyması",
+      "B) 2 numaralı aracın 1 numaralı aracı geçmesi",
+      "C) 3 numaralı kamyonun önündeki araçları geçmesi",
+      "D) 2 numaralı aracın 1 numaralı aracı geçerken hızını arttırması"
+    ],
+    correct: 2
+  },
+    {
+    question: `18. Soru: Şekildeki kara yoluna ne ad verilir?<br><img src='soruresimler/6.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) tali yol",
+      "B) geçiş yolu",
+      "C) bağlantı yolu",
+      "D) bölünmüş yol"
+    ],
+    correct: 3
+  },
+      {
+    question: `19. Soru: Şekildeki gibi bir karşılaşmada ilk geçiş hakkını hangisi kullanmalıdır?<br><img src='soruresimler/7.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) traktör",
+      "B) yaya",
+      "C) otomobil",
+      "D) motosiklet"
+    ],
+    correct: 1
+  },
+     {
+    question: "20. Soru: Aşağıdakilerden hangisi, kişiye bağlı gelişen trafik kazası nedenlerinden biri değildir?",
+    choices: [
+      "A) Alkol ve madde bağımlılığı",
+      "B) Uzun yolculuklar ve yorgunluk",
+      "C) Tehlikeye atılmaya hazır kişilik yapısı",
+      "D) Olumsuz hava şartları ve yolların bozuk olması"
+    ],
+    correct: 3
+  },
+        {
+    question: `21. Soru: Aksine bir işaret yoksa şekildeki aracın yerleşim yeri içindeki azami hızı saatte kaç kilometredir?<br><img src='soruresimler/8.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) 50",
+      "B) 70",
+      "C) 80",
+      "D) 90"
+    ],
+    correct: 0
+  },
+     {
+    question: "22. Soru: Alkollü olarak araç kullanma nedeniyle sürücü belgesi geri alınan kişinin, son ihlalin gerçekleştiği tarihten itibaren geriye doğru 5 yıl içinde, ikinci defa tespit edilmesi durumunda sürücü belgesi ne kadar süre ile geri alınır?",
+    choices: [
+      "A) 30 gün",
+      "B) 3 ay",
+      "C) 6 ay",
+      "D) 2 yıl"
+    ],
+    correct: 3
+  },
+   {
+    question: "23. Soru: Trafik kazasına karışan kişilerin tümü, yetkililerin gelmesini gerekli görmez ve anlaşırlarsa, durumu aralarında yazılı olarak tespit etmek suretiyle olay yerinden ayrılabilirler. Yukarıdaki ifade hangi tür kazalarda geçerlidir?",
+    choices: [
+      "A) Ölümlü kazalarda",
+      "B) Yaralanmalı kazalarda",
+      "C) Maddi hasarlı kazalarda",
+      "D) Maddi hasarlı ve yaralanmalı kazalarda"
+    ],
+    correct: 2
+  },
+     {
+    question: "24. Soru: Işıklı trafik işaret cihazında yanan hangi ışık, ikaz mahiyetinde olup yanış sırasına göre yolun trafiğe kapanmak veya açılmak üzere olduğunu gösterir?",
+    choices: [
+      "A) yeşil ışık",
+      "B) sarı ışık",
+      "C) kırmızı ışık",
+      "D) kırmızı oklu ışık"
+    ],
+    correct: 1
+  },
+     {
+    question: "25. Soru: Geceleri araçların karşılaşmaları esnasında hangi ışıkların yakılması zorunludur?",
+    choices: [
+      "A) Dönüş ışıklarının",
+      "B) Sis veya park ışıklarının",
+      "C) Uzağı gösteren ışıkların",
+      "D) Yakını gösteren ışıkların"
+    ],
+    correct: 3
+  },
+     {
+    question: "26. Soru: Arkadan çarpma şeklindeki trafik kazalarının en önemli sebebi aşağıdakilerden hangisidir?",
+    choices: [
+      "A) Öndeki aracın durması",
+      "B) Öndeki aracın yavaşlaması",
+      "C) Görüş mesafesinin kötü olması",
+      "D) Takip mesafesi kurallarına uyulmaması"
+    ],
+    correct: 3
+  },
+     {
+    question: "27. Soru: Aracına “LPG” sistemi taktıran bir kişi, bu durumu kaç gün içinde ilgili kuruluşa bildirmek zorundadır?",
+    choices: [
+      "A) 30",
+      "B) 40",
+      "C) 50",
+      "D) 60"
+    ],
+    correct: 0
+  },
+      {
+    question: `28. Soru: Şekle göre 2 numaralı aracın sürücüsü ne yapmalıdır?<br><img src='soruresimler/9.png' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Hızını artırmalı",
+      "B) U dönüşü yapmalı",
+      "C) 1 numaralı araca yol vermeli",
+      "D) 1 numaralı aracı ikaz ederek durdurmalı"
+    ],
+    correct: 2
+  },
+        {
+    question: `29. Soru: Taşıt yolu üzerine çizilen şekildeki yatay işaretleme, sürücülere aşağıdakilerden hangisini bildirir?<br><img src='soruresimler/10.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Kavşağa 50 m kaldığını",
+      "B) Asgari (en az) hız sınırını",
+      "C) Azami (en yüksek) hız sınırını",
+      "D) Öndeki araca 50 m´den fazla yaklaşılmamasını"
+    ],
+    correct: 2
+  },
+     {
+    question: "30. Soru: Aksine bir işaret bulunmadıkça otoyolda minibüs ve otobüsler için azami hız saatte kaç kilometredir?",
+    choices: [
+      "A) 80",
+      "B) 90",
+      "C) 100",
+      "D) 110"
+    ],
+    correct: 2
+  },
+       {
+    question: `31. Soru: Şekildeki trafik görevlisinin yapmış olduğu işaretin sürücüler için anlamı nedir?<br><img src='soruresimler/11.jpg' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) Sağa yanaş",
+      "B) Yavaşla",
+      "C) Hızlan",
+      "D) Dur"
+    ],
+    correct: 2
+  },
+     {
+    question: "32. Soru: Öndeki aracın güvenle takip edildiği uzaklığa ne denir?",
+    choices: [
+      "A) Takip mesafesi",
+      "B) Geçiş mesafesi",
+      "C) Görüş mesafesi",
+      "D) İntikal mesafesi"
+    ],
+    correct: 0
+  },
+     {
+    question: "33. Soru: Bekleme amacıyla yapılan duraklamanın süresi en çok kaç dakikadır?",
+    choices: [
+      "A) 5",
+      "B) 10",
+      "C) 15",
+      "D) 20"
+    ],
+    correct: 0
+  },
+       {
+    question: `34. Soru: Şekildeki kavşakta ilk geçiş hakkı sıralaması nasıl olmalıdır?<br><img src='soruresimler/12.gif' alt='Yol Ver' style='max-width: 100%; margin-top: 10px;'>`,
+    choices: [
+      "A) 1 - 2 - 3",
+      "B) 1 - 3 - 2",
+      "C) 2 - 3 - 1",
+      "D) 3 - 1 – 2"
+    ],
+    correct: 2
+  },
+    {
+    question: "35. Soru: Aşağıdakilerden hangisi motorla vites kutusu arasındaki irtibatı keserek, vites değiştirme imkânı sağlayan güç aktarma organıdır?",
+    choices: [
+      "A) Amortisör",
+      "B) Helezon yay",
+      "C) Fren balatası",
+      "D) Kavrama (Debriyaj)"
+    ],
+    correct: 3
+  },
+   {
+    question: "36. Soru: Kışın aşırı soğuktan dolayı motor soğutma suyu donduğu zaman meydana gelen genleşme kuvveti; silindir bloğu, silindir kapağı ve radyatörü çatlatabilir. Buna göre donmayı önlemek için motor soğutma suyuna aşağıdakilerden hangisinin yeterli miktarda karıştırılması gerekir?",
+    choices: [
+      "A) asit",
+      "B) antifriz",
+      "C) saf su",
+      "D) motor yağı"
+    ],
+    correct: 1
+  },
+     {
+    question: "37. Soru: Motor çalışırken marş yapılırsa aşağıdakilerden hangisi meydana gelir?",
+    choices: [
+      "A) Motor daha hızlı döner.",
+      "B) Marş dişlisi zarar görür.",
+      "C) Motor daha yavaş döner.",
+      "D) Motor daha iyi yağlama yapar."
+    ],
+    correct: 1
+  },
+   {
+    question: "38. Soru: Yağ pompasının pompaladığı yağı süzerek, içindeki yabancı maddeleri temizleyen yağlama sistemi parçası aşağıdakilerden hangisidir?",
+    choices: [
+      "A) Enjektör",
+      "B) Hava filtresi",
+      "C) Yağ filtresi",
+      "D) Yakıt filtresi"
+    ],
+    correct: 2
+  },
+    {
+    question: "39. Soru: Kullanma kılavuzuna göre, belirli kilometre sonunda araçta aşağıdakilerden hangisi değiştirilmelidir?",
+    choices: [
+      "A) Radyatör",
+      "B) Yağ filtresi",
+      "C) Dikiz aynaları",
+      "D) Direksiyon simidi"
+    ],
+    correct: 1
+  },
+     {
+    question: "40. Soru: Aşağıdakilerden hangisinin, normalin çok altında eksilmesi veya özelliğini kaybetmesi durumunda motor aşırı ısınarak zarar görür?",
+    choices: [
+      "A) Antifriz",
+      "B) Fren hidroliği",
+      "C) Motor yağı",
+      "D) Akü elektroliti"
+    ],
+    correct: 2
+  },
+    {
+    question: "41. Soru: Aşağıdakilerden hangisi buji ile ateşlemeli motorların yakıtıdır?",
+    choices: [
+      "A) benzin",
+      "B) motorin",
+      "C) antifriz",
+      "D) gaz yağı"
+    ],
+    correct: 0
+  },
+    {
+    question: "42. Soru: Aşağıdakilerden hangisi frenlerin tutmamasına neden olur?",
+    choices: [
+      "A) Debriyajın kaçırması",
+      "B) Fren balatalarının yeni olması",
+      "C) Fren hidrolik sisteminde sızıntı olması",
+      "D) Fren lambalarının yanmaması"
+    ],
+    correct: 2
+  },
+    {
+    question: "43. Soru: Aşağıdakilerden hangisi, trafikte diğerlerine göre daha çabuk ve fazla öfkelenen sürücülerin yol açtığı bir durum değildir?",
+    choices: [
+      "A) Sabırsızlık ve tahammülsüzlüğün artması",
+      "B) Kazaya karışma olasılığının azalması",
+      "C) Kural ihlallerinin artması",
+      "D) Dikkatin dağılması"
+    ],
+    correct: 1
+  },
+    {
+    question: "44. Soru: Sürücünün aracını hareket ettirmesiyle birlikte trafikteki diğer yol kullanıcıları ile iletişimi başlar ve aracını park edinceye kadar da bu iletişim sürer. Buna göre, aşağıdakilerden hangisi trafikte olumlu yönde iletişim kurma becerisine örnektir?",
+    choices: [
+      "A) Korkutmak veya şaşırtmak",
+      "B) Su, çamur ve benzerlerini sıçratmak",
+      "C) Sola ya da sağa dönüş yapmadan önce sinyal vermek",
+      "D) Sigara külü ve izmaritlerini veya başka şeyleri yola atıp dökmek"
+    ],
+    correct: 2
+  },
+    {
+    question: "45. Soru: I. Geçiş üstünlüğüne sahip araçlara yol vermek<br>  II. Aşırı hız yaparak diğer sürücülerin dikkatlerini dağıtmak <br> III. Engeli olmadığı hâlde engelli kişiler için ayrılmış yerlere park etmek <br> Yukarıdakilerden hangileri trafikte bireye yapılan hak ihlallerindendir? ",
+    choices: [
+      "A) Yalnız I.",
+      "B) I ve II.",
+      "C) II ve III.",
+      "D) I, II ve III."
+    ],
+    correct: 2
+  },
+    {
+    question: "46. Soru: Aşağıdakilerden hangisi öfkenin vücutta ortaya çıkardığı fizyolojik tepkilerden biri değildir?",
+    choices: [
+      "A) Yüzün kızarması",
+      "B) Kaşların çatılması",
+      "C) Yumrukların sıkılması",
+      "D) Kontrollü davranılması"
+    ],
+    correct: 3
+  },
+    {
+    question: "47. Soru: Hangi özelliğe sahip olmayan sürücünün sabırsız, öfkeli, yorgun, stresli ve iletişim becerileri eksik bir kişi olma ihtimali daha fazladır?",
+    choices: [
+      "A) Bencil",
+      "B) Hoşgörülü",
+      "C) Aşırı tepki gösteren",
+      "D) Görgüsüzce davranan"
+    ],
+    correct: 1
+  },
+   {
+    question: "48. Soru: Aşağıdakilerden hangisi, öfkeyi başarılı bir şekilde yönetmek için önerilen davranışlardan biri değildir?",
+    choices: [
+      "A) İletişim becerilerinin geliştirilmesi",
+      "B) Alaycı ve aşağılayıcı mizaha başvurulması",
+      "C) Düşünme tarzının yeniden yapılandırılması",
+      "D) Nefes egzersizlerinin öğrenilip uygulanması"
+    ],
+    correct: 1
+  },
+   {
+    question: "49. Soru: Bilinci kapalı, solunumu ve dolaşımı olmayan kazazedenin omuriliğine zarar vermeden araç içinden çıkarılması için aşağıdaki tekniklerden hangisi kullanılmalıdır?",
+    choices: [
+      "A) Rentek manevrası",
+      "B) Heimlich manevrası",
+      "C) Ayak bileklerinden sürükleme yöntemi",
+      "D) Koltuk altından tutarak sürükleme yöntemi"
+    ],
+    correct: 0
+  },
+   {
+    question: "50. Soru: Suda boğulan kalp ve solunumu durmuş bir yetişkine, ilk yardım yapan kişi tek başına ise aşağıdakilerden hangisini uyguladıktan sonra tıbbi yardım istemelidir?",
+    choices: [
+      "A) 30 kalp masajı, 2 suni solunumu 5 tur uyguladıktan sonra",
+      "B) 60 kalp masajı, 1 suni solunumu 5 tur uyguladıktan sonra",
+      "C) 30 kalp masajı, 2 suni solunum uygulamasının hemen sonrası",
+      "D) 60 kalp masajı, 2 suni solunum uygulamasının hemen sonrası"
+    ],
+    correct: 0
+  },
+
+];
+
+
+ 
     let current = 0;
     const answers = Array(questions.length).fill(null);
     let startTime, timer;
@@ -256,16 +742,12 @@
       document.getElementById("examContainer").style.display = "block";
       startTime = Date.now();
       startTimer();
-      loadQuestion(); // SORUN BURADAYDI — tekrar eklendi!
-    }
-
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark");
+      loadQuestion();
     }
 
     function loadQuestion() {
       const q = questions[current];
-      document.getElementById("question").textContent = q.question;
+      document.getElementById("question").innerHTML = q.question;
       const choicesDiv = document.getElementById("choices");
       choicesDiv.innerHTML = "";
       q.choices.forEach((choice, index) => {
@@ -317,7 +799,7 @@
       const totalTime = Math.floor((Date.now() - startTime) / 1000);
       const minutes = Math.floor(totalTime / 60);
       const seconds = totalTime % 60;
-      document.getElementById("resultTitle").textContent = correct >= 35 ? "Tebrikler, Geçtiniz!" : "Üzgünüz, Kaldınız!";
+      document.getElementById("resultTitle").textContent = correct >= 35 ? "Tebrikler, Geçtiniz!" : "Üzgünüz, Kaldınız! En Az 35 Doğru Yapmanız Gerekiyordu.";
       document.getElementById("scoreText").textContent = `Doğru: ${correct} | Yanlış: ${incorrect}`;
       document.getElementById("blankText").textContent = `Boş: ${blank}`;
       document.getElementById("timeText").textContent = `Süre: ${minutes} dakika ${seconds} saniye`;
