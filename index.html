@@ -8,6 +8,24 @@
   <link rel="stylesheet" type="text/css" href="anasayfa.css">
   
 </head>
+
+<style>
+.ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 400px) {
+  .ad-container iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+</style>
 <body>
   <header>
     <div class="logo">
@@ -23,16 +41,22 @@
       </ul>
     </nav>
   </header>
-<script type="text/javascript">
-  atOptions = {
-    'key' : '5c0c89a2fd77680e0311066709e223df',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/5c0c89a2fd77680e0311066709e223df/invoke.js"></script>
+
+  <!-- Reklamı saran div -->
+<div class="ad-container">
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '5c0c89a2fd77680e0311066709e223df',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//www.highperformanceformat.com/5c0c89a2fd77680e0311066709e223df/invoke.js"></script>
+</div>
+
+
 
 
     <div class="hero-content">
