@@ -23,8 +23,16 @@
       </ul>
     </nav>
   </header>
->
-
+<script type="text/javascript">
+  atOptions = {
+    'key' : '5c0c89a2fd77680e0311066709e223df',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/5c0c89a2fd77680e0311066709e223df/invoke.js"></script>
 
 
     <div class="hero-content">
@@ -70,7 +78,20 @@
     <p>&copy; 2025 Şahin Ehliyet. Tüm hakları saklıdır.</p>
     <a href="gizlilik.html">Gizlilik</a>
   </footer>
+<script>
+  function showAdsterraThenDownload() {
+    // Reklamı aç (bu link Adsterra'nın otomatik açılan linkidir)
+    window.open("https://syndication.realsrv.com/splash.php?idzone=27152045", "_blank"); // <-- Kendi ID'ni yaz buraya
 
+    // 5 saniye sonra PDF'yi indir
+    setTimeout(function () {
+      const link = document.createElement('a');
+      link.href = "https://example.com/pdfdosyan.pdf";  // <-- PDF linkini buraya koy
+      link.download = "";
+      link.click();
+    }, 5000);
+  }
+</script>
   <script>
     const video = document.getElementById('tanitimVideo');
     video.muted = true;
